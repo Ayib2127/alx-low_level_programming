@@ -1,17 +1,12 @@
-#include "main.h"
-/**
- * main - prints the string "_putchar" from a character array.
- * Return: 0 on success.
- */
-int main(void)
-{
-	char c[] = "_putchar";
-	int i;
+#include <unistd.h>
 
-	for (i = 0; i < 8; i++)
-	{
-		_putchar(c[i]);
-	}
-	_putchar('\n');
-	return (0);
+/**
+ * _putchar - writes the character c to std out.
+ * @c: the character to print
+ * Return: 1 on success.
+ * on error, -1
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
