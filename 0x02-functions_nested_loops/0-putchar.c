@@ -1,5 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#include <stdio.h>
 /**
  * _putchar - writes the character _putchar to std out.
  * @c: the character to prin * Return: 1 on success.
