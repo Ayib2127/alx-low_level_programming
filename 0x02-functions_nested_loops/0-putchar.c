@@ -1,15 +1,21 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-#include <stdio.h>
 /**
- * _putchar - writes the character _putchar to std out.
- * @c: the character to prin * Return: 1 on success.
- 
- * on error, 
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-int _putchar(char _putchar)
+int main(void)
 {
-	return (write(1, &_putchar, 1));
+char letter[] = "_putchar";
+int i;
+
+for (i = 0; i < 9; i++)
+{
+_putchar(letter[i]);
 }
-#endif /* MAIN_H */
+
+_putchar('\n');
+
+return (0);
+}
