@@ -1,1 +1,1 @@
-tructure 
+Structure and type def
