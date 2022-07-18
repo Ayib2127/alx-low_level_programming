@@ -1,24 +1,27 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _strncat - check the code
- * @dest: Destination string
- * @src: String to be added
- * @n: Array block
- * Return: Always 0.
+ * _strncat - appends src to the dest string
+ * @dest: string to append by src
+ * @src: string to append to dest
+ * @n: largest number of bytes to append
+ *
+ * Return: address of dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
-	for (i = 0; dest[i] != '\0'; i++)
-		;
-
-	for (j = 0; j < n; j++, i++)
+	i = j = 0;
+	while (*(dest + i))
+		i++;
+	while (j < n && *(src + j))
 	{
-		dest[i] = src[j];
+		*(dest + i) = *(src + j);
+		i++;
+		j++;
 	}
-
+	if (j < n)
+		*(dest + i) = *(src + j);
 	return (dest);
 }
